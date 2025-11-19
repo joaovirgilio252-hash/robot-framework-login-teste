@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-10-12T21:54:24.239327" rpa="false" schemaversion="5">
+<suite id="s1" name="Google" source="c:\Users\joaov\.robotframework-ls\google.robot\google.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-10-12T21:54:26.151872" level="INFO">Opening browser 'Chrome' to base url 'https://duckduckgo.com/'.</msg>
+<arg>https://duckduckgo.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-12T21:54:26.148354" elapsed="14.471601"/>
+</kw>
+<test id="s1-t1" name="Cenário 1: Busca por Robot Framework" line="25">
+<kw name="Pesquisar por Robot Framework">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-12T21:54:40.767436" elapsed="1.110988"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-12T21:54:41.881777" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>${QUERY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-12T21:54:41.879499" elapsed="0.682515"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-10-12T21:54:42.565293" level="INFO">Sending key(s) ('RETURN',) to name=q element.</msg>
+<msg time="2025-10-12T21:54:43.005554" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-10-12T21:54:43.006445" level="INFO">Releasing special key RETURN.</msg>
+<arg>name=q</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-10-12T21:54:42.563171" elapsed="0.521136"/>
+</kw>
+<status status="PASS" start="2025-10-12T21:54:40.758566" elapsed="2.327161"/>
+</kw>
+<kw name="Abrir primeiro resultado relevante">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=(//a[contains(., "Robot Framework")])[1]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-12T21:54:43.101149" elapsed="4.454232"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-12T21:54:47.558121" level="INFO">Clicking element 'xpath=(//a[contains(., "Robot Framework")])[1]'.</msg>
+<arg>xpath=(//a[contains(., "Robot Framework")])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-12T21:54:47.556598" elapsed="9.060243"/>
+</kw>
+<status status="PASS" start="2025-10-12T21:54:43.099383" elapsed="13.518641"/>
+</kw>
+<kw name="Verificar página aberta">
+<kw name="Wait Until Location Does Not Contain" owner="SeleniumLibrary">
+<arg>duckduckgo.com</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL does not contains ``location``.</doc>
+<status status="PASS" start="2025-10-12T21:54:56.958753" elapsed="0.121210"/>
+</kw>
+<kw name="Title Should Contain">
+<msg time="2025-10-12T21:54:57.089243" level="FAIL">No keyword with name 'Title Should Contain' found. Did you mean:
+    SeleniumLibrary.Table Should Contain</msg>
+<arg>Robot Framework</arg>
+<status status="FAIL" start="2025-10-12T21:54:57.088467" elapsed="0.005337">No keyword with name 'Title Should Contain' found. Did you mean:
+    SeleniumLibrary.Table Should Contain</status>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Getting started</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-12T21:54:57.095465" elapsed="0.000735"/>
+</kw>
+<status status="FAIL" start="2025-10-12T21:54:56.956740" elapsed="0.140712">No keyword with name 'Title Should Contain' found. Did you mean:
+    SeleniumLibrary.Table Should Contain</status>
+</kw>
+<status status="FAIL" start="2025-10-12T21:54:40.623229" elapsed="16.552590">No keyword with name 'Title Should Contain' found. Did you mean:
+    SeleniumLibrary.Table Should Contain</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-10-12T21:54:58.566012" elapsed="6.308175"/>
+</kw>
+<status status="FAIL" start="2025-10-12T21:54:24.277858" elapsed="40.596996"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Google" id="s1" pass="0" fail="1" skip="0">Google</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
