@@ -36,8 +36,3 @@ O objetivo é validar diferentes combinações de credenciais e mensagens de ret
 
 AutorProjeto desenvolvido por João Virgílio como prática de automação de testes.
 
----
-
-👉 Sugestão: copie esse conteúdo e substitua o `README.md` no seu repositório. Assim, quando seu tio abrir o link, ele já vai ver uma documentação clara e organizada.  
-
-Quer que eu também prepare um **requirements.txt** pronto para você colar junto, com todas as dependências necessárias?
