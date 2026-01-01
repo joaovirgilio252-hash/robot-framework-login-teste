@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-10-12T21:54:24.239327" rpa="false" schemaversion="5">
-<suite id="s1" name="Google" source="c:\Users\joaov\.robotframework-ls\google.robot\google.robot">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-10-12T21:54:26.151872" level="INFO">Opening browser 'Chrome' to base url 'https://duckduckgo.com/'.</msg>
-<arg>https://duckduckgo.com/</arg>
-<arg>Chrome</arg>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-01-01T16:59:10.939843" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="c:\Users\joaov\.robotframework-ls\google.robot\login.robot">
+<test id="s1-t1" name="Cenário 5: Inserir e-mail e senha Válidos" line="103">
+<kw name="Abrir site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-01T16:59:13.886137" level="INFO">Opening browser 'chrome' to base url 'https://horadoqa.github.io/login/'.</msg>
+<arg>${url_site}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-12T21:54:26.148354" elapsed="14.471601"/>
+<status status="PASS" start="2026-01-01T16:59:13.881216" elapsed="8.244072"/>
 </kw>
-<test id="s1-t1" name="Cenário 1: Busca por Robot Framework" line="25">
-<kw name="Pesquisar por Robot Framework">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>name=q</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-12T21:54:40.767436" elapsed="1.110988"/>
+<status status="PASS" start="2026-01-01T16:59:13.873365" elapsed="8.253253"/>
+</kw>
+<kw name="Ambos Válidos">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-01T16:59:22.172520" level="INFO">Clicking element '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T16:59:22.170292" elapsed="0.814800"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-12T21:54:41.881777" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
-<arg>name=q</arg>
-<arg>${QUERY}</arg>
+<msg time="2026-01-01T16:59:22.989294" level="INFO">Typing text 'usuario@example.com' into text field '//*[@id="username"]'.</msg>
+<arg>${locator_username}</arg>
+<arg>text=usuario@example.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-12T21:54:41.879499" elapsed="0.682515"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-10-12T21:54:42.565293" level="INFO">Sending key(s) ('RETURN',) to name=q element.</msg>
-<msg time="2025-10-12T21:54:43.005554" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-10-12T21:54:43.006445" level="INFO">Releasing special key RETURN.</msg>
-<arg>name=q</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-10-12T21:54:42.563171" elapsed="0.521136"/>
-</kw>
-<status status="PASS" start="2025-10-12T21:54:40.758566" elapsed="2.327161"/>
-</kw>
-<kw name="Abrir primeiro resultado relevante">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>xpath=(//a[contains(., "Robot Framework")])[1]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-12T21:54:43.101149" elapsed="4.454232"/>
+<status status="PASS" start="2026-01-01T16:59:22.987448" elapsed="0.612399"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-12T21:54:47.558121" level="INFO">Clicking element 'xpath=(//a[contains(., "Robot Framework")])[1]'.</msg>
-<arg>xpath=(//a[contains(., "Robot Framework")])[1]</arg>
+<msg time="2026-01-01T16:59:23.602584" level="INFO">Clicking element '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-12T21:54:47.556598" elapsed="9.060243"/>
+<status status="PASS" start="2026-01-01T16:59:23.601023" elapsed="0.333688"/>
 </kw>
-<status status="PASS" start="2025-10-12T21:54:43.099383" elapsed="13.518641"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-01T16:59:23.937409" level="INFO">Typing text '1q2w3e4r' into text field '//*[@id="password"]'.</msg>
+<arg>${locator_password}</arg>
+<arg>text=1q2w3e4r</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T16:59:23.935865" elapsed="0.424329"/>
 </kw>
-<kw name="Verificar página aberta">
-<kw name="Wait Until Location Does Not Contain" owner="SeleniumLibrary">
-<arg>duckduckgo.com</arg>
-<arg>10s</arg>
-<doc>Waits until the current URL does not contains ``location``.</doc>
-<status status="PASS" start="2025-10-12T21:54:56.958753" elapsed="0.121210"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-01T16:59:24.364868" level="INFO">Clicking element '//button[contains(text(),"Entrar")]'.</msg>
+<arg>${locator_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-01T16:59:24.363217" elapsed="1.394755"/>
 </kw>
-<kw name="Title Should Contain">
-<msg time="2025-10-12T21:54:57.089243" level="FAIL">No keyword with name 'Title Should Contain' found. Did you mean:
-    SeleniumLibrary.Table Should Contain</msg>
-<arg>Robot Framework</arg>
-<status status="FAIL" start="2025-10-12T21:54:57.088467" elapsed="0.005337">No keyword with name 'Title Should Contain' found. Did you mean:
-    SeleniumLibrary.Table Should Contain</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-01T16:59:28.761160" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-01T16:59:25.759072" elapsed="3.003195"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Getting started</arg>
-<arg>10s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" start="2025-10-12T21:54:57.095465" elapsed="0.000735"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${validar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-01T16:59:28.763434" elapsed="0.115375"/>
 </kw>
-<status status="FAIL" start="2025-10-12T21:54:56.956740" elapsed="0.140712">No keyword with name 'Title Should Contain' found. Did you mean:
-    SeleniumLibrary.Table Should Contain</status>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-01-01T16:59:28.960131" level="INFO">Element '//h1[contains(text(),"Bem")]' is displayed.</msg>
+<arg>${validar}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-01T16:59:28.879778" elapsed="0.081495"/>
 </kw>
-<status status="FAIL" start="2025-10-12T21:54:40.623229" elapsed="16.552590">No keyword with name 'Title Should Contain' found. Did you mean:
-    SeleniumLibrary.Table Should Contain</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-01T17:00:28.964654" level="INFO">Slept 1 minute.</msg>
+<arg>60s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-01T16:59:28.962613" elapsed="60.002987"/>
+</kw>
+<status status="PASS" start="2026-01-01T16:59:22.168182" elapsed="66.798122"/>
+</kw>
+<kw name="Fechar site">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-01T17:00:28.970834" elapsed="3.028307"/>
+</kw>
+<status status="PASS" start="2026-01-01T17:00:28.968952" elapsed="3.031117"/>
+</kw>
+<status status="PASS" start="2026-01-01T16:59:13.867667" elapsed="78.139716"/>
 </test>
-<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-10-12T21:54:58.566012" elapsed="6.308175"/>
-</kw>
-<status status="FAIL" start="2025-10-12T21:54:24.277858" elapsed="40.596996"/>
+<status status="PASS" start="2026-01-01T16:59:10.981328" elapsed="81.038241"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Google" id="s1" pass="0" fail="1" skip="0">Google</stat>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
 </suite>
 </statistics>
 <errors>
